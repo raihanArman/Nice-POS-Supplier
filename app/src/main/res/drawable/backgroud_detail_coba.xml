@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle" android:padding="10dp">
+            <corners android:bottomRightRadius="80dp" android:bottomLeftRadius="80dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/bg_horizontal" android:gravity="fill_vertical" />
+</layer-list>

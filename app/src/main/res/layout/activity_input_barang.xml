@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home.InputBarangActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/background_coklat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:translationX="90dp"
+            android:translationY="-120dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/lv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:layout_margin="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Input Barang"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/trebuc"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/iv_barang"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"/>
+                <LinearLayout
+                    android:id="@+id/layout_btn_add_image"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:background="@drawable/border_white"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ic_camera_alt_black_24dp"
+                        android:tint="#848484"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tambahkan Gambar"
+                        android:fontFamily="@font/trebuc"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_ganti_gambar"
+                    android:background="@drawable/bg_button_tambah_keranjang"
+                    android:text="Ganti gambar"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/layout_btn_add_image"
+                    android:layout_margin="16dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/trebuc"
+                    android:textStyle="bold"
+                    android:text="Nama Barang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/et_nama_barang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input"
+                    android:padding="15dp"/>
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/trebuc"
+                    android:textStyle="bold"
+                    android:text="Deskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/et_deskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/bg_input"
+                    android:inputType="text|textMultiLine"
+                    android:gravity="top"
+                    android:padding="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:textSize="20sp"
+                        android:fontFamily="@font/trebuc"
+                        android:textStyle="bold"
+                        android:text="Satuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Spinner
+                        android:id="@+id/sp_satuan"
+                        android:padding="8dp"
+                        android:layout_marginLeft="20dp"
+                        android:hint="Pilih kategori"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"></Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:textSize="20sp"
+                        android:fontFamily="@font/trebuc"
+                        android:textStyle="bold"
+                        android:text="Harga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/et_harga"
+                        android:layout_width="200dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input"
+                        android:inputType="number"
+                        android:padding="15dp"/>
+                    <TextView
+                        android:text="/"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/trebuc"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tv_satuan"
+                        android:text="satuan"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/trebuc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:textSize="20sp"
+                        android:fontFamily="@font/trebuc"
+                        android:textStyle="bold"
+                        android:text="Stok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                        android:id="@+id/btn_stok"
+                        android:layout_width="90dp"
+                        android:layout_marginLeft="43dp"
+                        android:layout_height="40dp"
+                        app:backGroundColor="@color/colorAccent"/>
+                </LinearLayout>
+
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fb_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#03A9F4"
+                    android:src="@drawable/ic_file_upload_black_24dp"
+                    android:tint="@android:color/white"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="30dp"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fb_edit"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#4CAF50"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@android:color/white"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="30dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

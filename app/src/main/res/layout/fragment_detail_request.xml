@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.home.notification.DetailRequestFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fm_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/trebuc"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="450dp"
+                android:layout_height="450dp"
+                android:layout_gravity="center_horizontal"
+                android:translationY="-135dp"
+                android:src="@drawable/background_second"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="20dp">
+                    <ImageView
+                        android:id="@+id/iv_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Raihan Arman"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/trebuc"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_cafe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="35sp"
+                    android:text="PT Jaya Abadi"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/trebuc"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_request"
+            android:layout_below="@id/fm_1"
+            android:layout_width="match_parent"
+            android:translationY="-60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            tools:listitem="@layout/item_request"/>
+        <LinearLayout
+            android:layout_below="@id/rv_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/tv_terima"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:layout_width="100dp"
+                android:text="Terima"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_red"/>
+            <TextView
+                android:id="@+id/tv_batalkan"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_width="100dp"
+                android:text="Batalkan"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_red"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
